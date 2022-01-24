@@ -1,0 +1,206 @@
+*{
+   margin: 0;
+}
+
+html,body{
+   height: 100%;
+}
+
+header{
+   background: #bbbbbb;
+   height: 20%;
+   margin-bottom: 100px;
+   padding: 25px;
+}
+
+img{
+   height: 100px;
+   width: auto;
+}
+
+.container-header{
+   align-items: center;
+   display: flex;
+   height: 100px;
+   justify-content: space-around;
+   padding: 0 10px;
+}
+
+h1 a{
+   color: #1f1f1f;
+   font-size: 1.5em;
+   font-family: cursive;
+   font-weight: bold;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+img:hover{
+   transform: scale(1.2);
+}
+
+.link-header{
+   color: #1f1f1f;
+   font-size: 1.3em;
+   font-family: cursive;
+   font-weight:500;
+   text-decoration: none;
+}
+
+.link-header:before{
+   padding-right: 5px;
+   content: '➣';
+}
+
+.link-header:hover{
+   color: #705c5c;
+   cursor: pointer;
+   text-decoration:underline;
+}
+
+.list-header{
+   display: flex;
+   flex-direction: column;
+}
+
+.list-header li{
+   margin-bottom: 12px;
+}
+
+.list-header li:last-child{
+   margin-bottom: 0;
+}
+
+/*main*/
+main{
+   height: 41%;
+   width: 100%;
+}
+
+section h2{
+   color: #1f1f1f;
+   font-family: cursive;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: 20px;
+   padding: 10px;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.registerExpense-section{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 0 10px;
+}
+
+.registerExpense-section div{
+   margin-right: 10px;
+   margin-bottom: 10px;
+}
+
+.registerExpense-section div:last-child{
+   margin-right: 0;
+}
+
+select, input{
+   border: 1px solid #bbbbbb;
+   border-radius: 5px;
+   box-sizing: border-box;
+   color: #1f1f1f;
+   font-size: 16px;
+   height: 40px;
+   width: 180px;
+}
+
+select:hover, input:hover{
+   background: #bbbbbb;
+   color: #000000;
+   cursor: pointer;
+}
+
+button{
+   background: #bbbbbb;
+   border: none;
+   border-radius: 5px;
+   box-sizing: border-box;
+   height: 40px;
+}
+
+button:hover{
+   cursor: pointer;
+   color: #705c5c;
+   transform: scale(1.2);
+}
+
+footer{
+   background: #bbbbbb;
+   height: 10%;
+   padding: 20px 10px;
+}
+
+.div-footer{
+   align-items: center;
+   display: flex;
+   justify-content: center;
+}
+
+.div-footer span{
+   color: #1f1f1f;
+}
+
+.img-footer{
+   height: auto;
+}
+
+@media screen and (max-width: 480px){
+   .container-header{
+      flex-direction: column;
+   }
+   a .graphic-header{
+      display: none;
+   }
+   h1{
+      margin-bottom: 20px;
+      margin-top: 20px;
+   }
+}
+
+.none-graphic{
+   color: #1f1f1f;
+   font-size: 1.2em;
+   font-family: cursive;
+   margin-bottom: 10px;
+   text-decoration: none;
+}
+
+.none-graphic:hover{
+   cursor: pointer;
+   color: #705c5c;
+   transform: scale(1.2);
+}
+
+@media screen and (min-width: 480px){
+   .none-graphic{
+      display: none;
+   }
+}
+
+/*Page consultas*/
+
+.consultExpenses{
+   display: flex;
+   justify-content: center;
+   margin-top: 30px;
+}
+
+.consultExpenses-table{
+   width: 50%;
+}
+
+.consultExpenses-table tr, th,td{
+   border:1px solid #bbbbbb;
+   padding: 8px;
+   font-size: 18px;
+}

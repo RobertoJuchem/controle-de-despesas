@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<title>Registro das despesas</title>
+	</head>
+
+	<body>
+		<header>
+			<div  class="container-header">
+				<h1><a href="index.html">Cadastro de despesas</a></h1>
+				
+				<a href="graphic.html"><img class="graphic-header" src="../img/despesas.png"></a>
+
+				<span class="none-graphic">Gráfico</span>
+
+				<nav class="nav-header">
+					<ul class="list-header">
+						<li><a class="link-header" href="index.html">Cadastro de registros</a></li>
+						<li><a class="link-header" href="consult.html">Consulta de registros</a></li>
+						<li><a class="link-header" href="graphic.html">Gráfico de registros</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section>
+				<h2>Registro de nova despesa</h2>
+				<div class="registerExpense-section">
+					<div class="typeDiv-section">
+						<input type="text" class="expenseType-section" placeholder="Tipo da despesa" id="type">
+					</div>
+
+					<div class="dayDiv-section">
+						<input type="text" class="day-select" placeholder="dia" id="day">
+					</div>
+
+					<div class="monthDiv-section">
+						<input type="month" id="month">
+					</div>
+
+					<div class="descriptionDiv-section">
+						<input class="description-section" type="text" placeholder="Descrição" id="description">
+					</div>
+
+					<div>
+						<input type="text" placeholder="Valor" id="value">
+					</div>
+
+					<div class="buttonDiv-section">
+						<button type="button" id="registerButton" onclick="addExpenses()">Registar</button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="div-footer">
+				<a href="consult.html"><img class="img-footer" src="../img/logo.png"></a>
+				<span>&copy;copyrigth Organize suas despesas - 2022</span>
+			</div>
+		</footer>
+	</body>
+	<script src="../build/index.js"></script>
+	</html>
