@@ -8,7 +8,7 @@ html,body{
 
 header{
    background: #bbbbbb;
-   height: 20%;
+   height: 15%;
    margin-bottom: 100px;
    padding: 25px;
 }
@@ -73,7 +73,7 @@ img:hover{
 
 /*main*/
 main{
-   height: 41%;
+   height: 47%;
    width: 100%;
 }
 
@@ -136,7 +136,7 @@ button:hover{
 
 footer{
    background: #bbbbbb;
-   height: 10%;
+   height: 4%;
    padding: 20px 10px;
 }
 
@@ -186,8 +186,6 @@ footer{
       display: none;
    }
 }
-
-/*Page consultas*/
 
 .consultExpenses{
    display: flex;
