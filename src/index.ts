@@ -4,6 +4,11 @@ import { getExpense } from './getHtmlValues'
 function addExpenses(): void{
    const getItems = getExpense()
    expenseDBInstance.createNewExpense(getItems)
+   console.log(getItems)
 }
 
-console.log(expenseDBInstance)
+function showExpenses(){
+   const showitems = getExpense()
+   expenseDBInstance.consultExpenses(showitems)
+   console.log(showitems)
+}
