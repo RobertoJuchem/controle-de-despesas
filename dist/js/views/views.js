@@ -1,6 +1,6 @@
 export class Views {
     constructor(selector) {
-        this.elemento = document.querySelector(selector);
+        this.element = document.querySelector(selector);
     }
     template(model) {
         return `
@@ -30,7 +30,6 @@ export class Views {
     }
     update(model) {
         const template = this.template(model);
-        console.log(template);
-        this.elemento.innerHTML = template;
+        this.element.innerHTML = template;
     }
 }

@@ -21,7 +21,6 @@ export class GetExpense {
     }
     getNewExpense() {
         const expenselist = this.getInputValues();
-        expenselist.dateItem.setDate(12);
         this.DBexpenses.createNewExpense(expenselist);
         this.viewExpenses.update(this.DBexpenses);
         this.clearInputs();

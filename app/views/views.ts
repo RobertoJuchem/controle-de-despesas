@@ -2,9 +2,9 @@ import { SavedItems } from "../models/database.js"
 
 
 export class Views {
-   elemento: HTMLElement
+   element: HTMLElement
    constructor(selector: string){
-      this.elemento = document.querySelector(selector)
+      this.element = document.querySelector(selector)
    }
    template(model: SavedItems): string {
       return `
@@ -34,7 +34,6 @@ export class Views {
    }
    update(model: SavedItems): void {
       const template = this.template(model)
-      console.log(template)
-      this.elemento.innerHTML = template
+      this.element.innerHTML = template
    }
 }
