@@ -202,3 +202,19 @@ footer{
    padding: 8px;
    font-size: 18px;
 }
+
+#view{
+   display: flex;
+   font-size: 18px;
+   justify-content: center;
+   padding: 8px;
+}
+
+#view table{
+   width: 62%;
+}
+
+tr, th, td{
+   padding: 8px;
+   text-align: center;
+}
