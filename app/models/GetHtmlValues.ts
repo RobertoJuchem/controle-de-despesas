@@ -1,4 +1,5 @@
-import { Views } from '../views/views.js'
+import { AddConfirm } from '../views/AddConfirm.js'
+import { MessageViews } from '../views/MessageViews.js'
 import {SavedItems} from './database.js'
 import { FilterExpenses } from './Expenses.js'
 
@@ -8,7 +9,8 @@ export class GetExpense {
    private description: HTMLInputElement
    private value: HTMLInputElement
    private DBexpenses = new SavedItems()
-   private viewExpenses = new Views('#view')
+   private viewExpenses = new MessageViews('#view')
+   private addConfirm = new AddConfirm('#addConfirm')
    
    constructor() {
       this.type = document.querySelector('#type') as HTMLInputElement
@@ -17,7 +19,13 @@ export class GetExpense {
       this.value = document.querySelector('#value') as HTMLInputElement
       this.viewExpenses.update(this.DBexpenses)
    }
-   getInputValues(): FilterExpenses{
+   getNewExpense(): void{
+      const expenselist = this.getInputValues()
+      this.DBexpenses.createNewExpense(expenselist)
+      this.clearInputs()
+      this.updateView()
+   }
+   private getInputValues(): FilterExpenses{
       const inputType = this.type.value
       const exp = /-/g
       const inputMonth = new Date(this.month.value.replace(exp, ','))
@@ -25,17 +33,14 @@ export class GetExpense {
       const inputValue = this.value.value
       return new FilterExpenses(inputMonth, inputType, inputDescription, inputValue)
    }
-   getNewExpense(): void{
-      const expenselist = this.getInputValues()
-      this.DBexpenses.createNewExpense(expenselist)
-      this.viewExpenses.update(this.DBexpenses)
-      this.clearInputs()
-   }
-   clearInputs(): void{
+   private clearInputs(): void{
       this.type.value = ''
-      this.month.focus()
       this.description.value = ''
       this.value.value = ''
+   }
+   private updateView():void{
+      this.viewExpenses.update(this.DBexpenses)
+      this.addConfirm.update('Despesa adicionada com sucesso!')
    }
 }
 

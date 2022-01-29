@@ -218,3 +218,19 @@ tr, th, td{
    padding: 8px;
    text-align: center;
 }
+
+.confirm-add-div{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+
+.confirm-add-div p{
+   text-align: center;
+   color: #1f1f1f;
+   background: #bbbbbb;
+   width: 80%;
+   border-radius: 5px;
+   height: 20px;
+   padding: 15px;
+}

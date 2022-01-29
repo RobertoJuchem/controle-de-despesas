@@ -1,12 +1,9 @@
 import { SavedItems } from "../models/database.js"
+import { View } from "./View.js"
 
+export class MessageViews extends View<SavedItems>{
 
-export class Views {
-   element: HTMLElement
-   constructor(selector: string){
-      this.element = document.querySelector(selector)
-   }
-   template(model: SavedItems): string {
+   protected template(model: SavedItems): string {
       return `
       <table>
          <thead>
